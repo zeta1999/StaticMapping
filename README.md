@@ -6,10 +6,33 @@
 [中文文档](README.Chinese.md)  
 
 # Introduction  
-<img src="doc/mapping.png" width="800" />  
+Static Mapping is a full lidar slam system using lidar (required) and gps (optional), imu (optional), odom (optional). More detail about the inner process refer to [flow figure](doc/mapping.png).  
 
 # Map with kitti dataset
 <img src="doc/kitti_rgb.png" width="800" />
+
+## Trajectories of kitti datasets
+> All the evaluations are done with this tool: https://github.com/MichaelGrupp/evo  
+
+<img src="doc/kitti_00_traj.png" width="240" />  <img src="doc/kitti_00_error.png" width="240" />
+
+<img src="doc/kitti_01_traj.png" width="240" />  <img src="doc/kitti_01_error.png" width="240" />
+
+<img src="doc/kitti_02_traj.png" width="240" />  <img src="doc/kitti_02_error.png" width="240" />
+
+<img src="doc/kitti_03_traj.png" width="240" />  <img src="doc/kitti_03_error.png" width="240" />
+
+<img src="doc/kitti_04_traj.png" width="240" />  <img src="doc/kitti_04_error.png" width="240" />
+
+<img src="doc/kitti_06_traj.png" width="240" />  <img src="doc/kitti_06_error.png" width="240" />
+
+<img src="doc/kitti_07_traj.png" width="240" />  <img src="doc/kitti_07_error.png" width="240" />
+
+<img src="doc/kitti_08_traj.png" width="240" />  <img src="doc/kitti_08_error.png" width="240" />
+
+<img src="doc/kitti_09_traj.png" width="240" />  <img src="doc/kitti_09_error.png" width="240" />
+
+<img src="doc/kitti_10_traj.png" width="240" />  <img src="doc/kitti_10_error.png" width="240" />
 
 # Indoor mapping example (garage)
 <img src="doc/garage.png" width="800" />
@@ -61,7 +84,7 @@ make -j8
 make check # optional, only if you want to check the code with unit tests.
 ```
 
-## Using Docker 
+## Or Using Docker 
 If yours host device is with UBUNTU 18.04, it is highly recommended to build and run this project in a docker because the docker is `FROM ros:melodic-ros-core-bionic`. Otherwise, you can also build your envrionment directly on your device refering to **Using host device** section below. 
 ps: there is something wrong with ros message sent from ros-kinetic to ros-melodic, so, it your host deice is not with Ubuntu 18.04, you can not use this docker, and the docker for ros-kinetic will come soon.
 ### Get docker image 
